@@ -8,7 +8,7 @@ class Prime
         if @number==0 || @number==1
             return false
         else
-            (2..(@number-1)).each {|x| return false if @number%x==0}
+            (2..Integer.sqrt(@number)).each {|x| return false if @number%x==0}
             return true
         end
     end
